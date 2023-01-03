@@ -1,1 +1,0 @@
-person.msg= This is person development properties.
