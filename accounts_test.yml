@@ -1,0 +1,54 @@
+spring:
+  application:
+    name: "accounts" 
+  datasource:
+    driverClassName: com.microsoft.sqlserver.jdbc.SQLServerDriver
+    password: jaggu444
+    url: jdbc:sqlserver://localhost:1433;encrypt=true;trustServerCertificate=true;databaseName=java_test
+    username: jagadeesh
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.SQLServer2012Dialect
+        format_sql: true
+    show-sql: true 
+  cloud:
+    config:
+      enabled: false
+  #This is about spring admin details      
+  boot:
+    admin:
+      client:
+        url:
+        - "http://localhost:9090/"    
+
+#This is about  actuator 
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
+        
+        
+
+       
+server:
+  port: 8081
+  error:
+    include-message: always
+    include-stacktrace: never
+
+accounts:
+  message: "Welcome to QA EazyBank accounts related local APIs "
+  contactDetails:
+    name: "QA John Doe - Developer"
+    email: "qa_john@eazybank.com"
+  onCallSupport:
+    - (555) 555-1234
+    - (555) 523-1345"    
+    
+  
+  
