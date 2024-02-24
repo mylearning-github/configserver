@@ -14,32 +14,7 @@ spring:
         dialect: org.hibernate.dialect.SQLServer2012Dialect
         format_sql: true
     show-sql: true 
-#  cloud:
-#    config:
-#      enabled: false
-  #This is about spring admin details      
-#  boot:
-#    admin:
-#      client:
-#        url:
-#        - "http://localhost:9090/"    
-#
-##This is about  actuator 
-#management:
-#  endpoints:
-#    web:
-#      exposure:
-#        include: "*"
-        
-        
 
-       
-#server:
-#  port: 8083
-#  error:
-#    include-message: always
-#    include-stacktrace: never
-    
 loans:
   message: "Welcome to TEST EazyBank loans related local APIs "
   contactDetails:
