@@ -13,17 +13,7 @@ spring:
         dialect: org.hibernate.dialect.SQLServer2012Dialect
         format_sql: true
     show-sql: true 
-  boot:
-    admin:
-      client:
-        url:
-        - "http://localhost:9090"
-# This is about Actuator        
-management:
-  endpoints:
-    web:
-      exposure:
-        exclude:    
+    
 accounts:
   message: "Welcome to TEST configuration of EazyBank Accounts related local APIs "
   contactDetails:
