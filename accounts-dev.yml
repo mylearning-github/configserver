@@ -12,19 +12,7 @@ spring:
         dialect: org.hibernate.dialect.SQLServer2012Dialect
         format_sql: true
     show-sql: true 
-# This is all about spring Admin configuration details
- boot:
-    admin:
-      client:
-        url:
-        - "http://localhost:9090/"
-# This is about Actuator        
-management:
-  endpoints:
-    web:
-      exposure:
-        include:
-        - "*"  accounts:
+
   message: "Welcome to DEV configuration of EazyBank Accounts related local APIs "
   contactDetails:
     name: "Dev John Doe - Developer"
