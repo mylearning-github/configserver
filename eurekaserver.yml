@@ -9,7 +9,8 @@ eureka:
     register-with-eureka: false
     service-url: 
       default-zone: http://${eureka.instance.hostname}:${server.port}/eureka/
-
+# Fetch registry means fetching other microservices registery 
+# Register with eureka means dont register with your self
 management:
   endpoints:
     web:
