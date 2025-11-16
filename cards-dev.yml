@@ -2,16 +2,16 @@
 
 spring:
   datasource:
-    driverClassName: com.microsoft.sqlserver.jdbc.SQLServerDriver
-    password: jaggu444
-    url: jdbc:sqlserver://localhost:1433;encrypt=true;trustServerCertificate=true;databaseName=java_dev
-    username: jagadeesh
+    url: jdbc:mysql://localhost:3306/accounts_dev
+    username: root
+    password: root
+   
   jpa:
     hibernate:
       ddl-auto: update
     properties:
       hibernate:
-        dialect: org.hibernate.dialect.SQLServer2012Dialect
+        dialect: org.hibernate.dialect.MySQLDialect
         format_sql: true
     show-sql: true 
     
@@ -27,3 +27,4 @@ cards:
     
   
   
+
