@@ -1,9 +1,8 @@
 spring:
   datasource:
-    driverClassName: com.microsoft.sqlserver.jdbc.SQLServerDriver
-    password: jaggu444
-    url: jdbc:sqlserver://localhost:1433;encrypt=true;trustServerCertificate=true;databaseName=java_dev
-    username: jagadeesh
+    url: jdbc:mysql://localhost:3306/accounts_dev
+    username: root
+    password: root
   jpa:
     hibernate:
       ddl-auto: update
@@ -22,3 +21,4 @@ accounts:
     - (555) 523-1345"    
   
   
+
