@@ -3,6 +3,7 @@ spring:
     url: jdbc:mysql://localhost:3306/eazybank_dev
     username: root
     password: root
+   
   jpa:
     hibernate:
       ddl-auto: update
@@ -21,6 +22,7 @@ accounts:
     - (555) 523-1345"    
   
   
+
 
 
 
