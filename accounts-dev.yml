@@ -1,8 +1,17 @@
+server:
+  port: 8081
+
 spring:
+  config:
+    import: "optional:configserver:http://localhost:8500"
+
+
   datasource:
-    url: jdbc:mysql://localhost:3306/eazybank_dev
+    url: jdbc:mysql://localhost:3306/eazybytes
     username: root
     password: root
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
   jpa:
     hibernate:
       ddl-auto: update
@@ -10,5 +19,3 @@ spring:
     properties:
       hibernate:
         format_sql: true
-        dialect: org.hibernate.dialect.MySQLDialect
-
