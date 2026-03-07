@@ -1,6 +1,7 @@
 server:
   port: 8081
 
+spring:
   datasource:
     url: jdbc:mysql://localhost:3306/eazybytes
     username: root
@@ -14,4 +15,3 @@ server:
     properties:
       hibernate:
         format_sql: true
-
