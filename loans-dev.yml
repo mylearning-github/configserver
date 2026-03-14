@@ -20,7 +20,13 @@ management:
     web:
       exposure:
         include:
-          - "*"        
+          - "*"
+  endpoint:
+    shutdown:
+      #UNRESTRICTED means when ever we try to call actuator/shutdown it will automatically stop the server
+      #none means when ever we try to call actuator/shutdown it will not allow to stop the server
+      # READ_ONLY when ever we try to call actuator/shutdown it will Allow GET but not shutdown
+      access: UNRESTRICTED       
 eureka:
   instance:
   # below ip address is true because in localhost we are not using any dns right if we add this it will generate random ip address
