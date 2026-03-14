@@ -24,6 +24,7 @@ management:
 
 eureka:
   instance:
+  # below ip address is true because in localhost we are not using any dns right if we add this it will generate random ip address
     prefer-ip-address: true
   client:
     fetch-registry: true
