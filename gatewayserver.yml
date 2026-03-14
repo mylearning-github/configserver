@@ -16,3 +16,6 @@ management:
       exposure:
         include:
           - "*"
+  endpoint:
+    shutdown:
+      access: UNRESTRICTED 
