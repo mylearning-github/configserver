@@ -26,7 +26,5 @@ management:
         include: "*"
   endpoint:
     gateway:
-      access: UNRESTRICTED      
-  endpoint:
-    shutdown:
       access: UNRESTRICTED
+  
