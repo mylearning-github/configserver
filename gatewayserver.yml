@@ -1,6 +1,5 @@
 spring:
-  
-  cloud: #this configuration is about connections with eureka discovery server
+  cloud:
     gateway:
       server:
         webflux:
@@ -13,19 +12,18 @@ server:
 
 eureka:
   instance:
-    # below ip address is true because in localhost we are not using any dns right if we add this it will generate random ip address
-    preferIpAddress: true
+    prefer-ip-address: true
   client:
-    fetchRegistry: true
-    registerWithEureka: true
-    serviceUrl:
+    fetch-registry: true
+    register-with-eureka: true
+    service-url:
       defaultZone: http://localhost:8761/eureka/
+
 management:
   endpoints:
     web:
       exposure:
-        include:
-          - "*"
+        include: "*"
   endpoint:
     shutdown:
-      access: UNRESTRICTED        -
+      access: UNRESTRICTED
