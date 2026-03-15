@@ -5,7 +5,7 @@ spring:
         webflux:
           discovery:
             locator:
-              enabled: true #discovery locator enable this is used for when ever a request come from the outside it should be register
+              enabled: false #This is used for the get the details from the eureka service registry and false is for dont use for the existing one use only from the apigateay url
               lowerCaseServiceId: true #This is for the service url name should be in lowercase
 
 server:
