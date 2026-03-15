@@ -6,6 +6,7 @@ spring:
           discovery:
             locator:
               enabled: true #discovery locator enable this is used for when ever a request come from the outside it should be register
+              lowerCaseServiceId: true
 
 server:
   port: 8505
