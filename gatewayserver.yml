@@ -25,5 +25,8 @@ management:
       exposure:
         include: "*"
   endpoint:
+    gateway:
+      access: UNRESTRICTED      
+  endpoint:
     shutdown:
       access: UNRESTRICTED
