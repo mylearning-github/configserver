@@ -1,3 +1,13 @@
+spring:
+  
+  cloud: #this configuration is about connections with eureka discovery server
+    gateway:
+      server:
+        webflux:
+          discovery:
+            locator:
+              enabled: true
+
 server:
   port: 8505
 
@@ -18,4 +28,4 @@ management:
           - "*"
   endpoint:
     shutdown:
-      access: UNRESTRICTED 
+      access: UNRESTRICTED        -
