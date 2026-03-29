@@ -2,6 +2,9 @@ server:
   port: 8081
 
 spring:
+  application:
+    name: accounts   # make sure this is correct
+
   datasource:
     url: jdbc:mysql://localhost:3306/eazybytes
     username: root
@@ -16,6 +19,16 @@ spring:
       hibernate:
         format_sql: true
 
+  cloud:
+    openfeign:
+      circuitbreaker:
+        enabled: true   # 🔥 MUST for fallback to work
+      client:
+        config:
+          default:
+            connectTimeout: 2000   # 2 seconds
+            readTimeout: 2000      # 2 seconds
+
 resilience4j:
   circuitbreaker:
     configs:
@@ -24,6 +37,19 @@ resilience4j:
         permittedNumberOfCallsInHalfOpenState: 2
         failureRateThreshold: 50
         waitDurationInOpenState: 10s
+
+    instances:
+      loans:
+        baseConfig: default   # must match Feign client name
+      cards:
+        baseConfig: default   # optional (since you use cards also)
+
+  timelimiter:
+    instances:
+      loans:
+        timeoutDuration: 2s   # 🔥 for debug pause testing
+      cards:
+        timeoutDuration: 2s   # optional
 
 management:
   endpoints:
@@ -42,7 +68,3 @@ eureka:
     register-with-eureka: true
     service-url:
       defaultZone: http://localhost:8761/eureka
-cloud:
-  openfeign:
-    circuitbreaker:
-      enabled: true
